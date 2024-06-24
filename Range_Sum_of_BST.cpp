@@ -1,5 +1,6 @@
 class Solution {
 private:
+    int sum = 0;
     int inorder(TreeNode *root, int left, int right) {
         if(root) {
             inorder(root -> left, left, right);
@@ -16,6 +17,6 @@ private:
 public:
     int rangeSumBST(TreeNode* root, int low, int high) {
         if(!root) return 0;
-        return inorder(root, low, right);
+        return inorder(root, low, high);
     }
 };
